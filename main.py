@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 import util
-from sort.sort import *
+from sort import *
 from util import get_car, read_license_plate, write_csv
 
 
@@ -11,7 +11,7 @@ results = {}
 mot_tracker = Sort()
 
 # load models
-coco_model = YOLO('yolov8n.pt')
+coco_model = YOLO('./models/license_plate_detector.pt')
 license_plate_detector = YOLO('./models/license_plate_detector.pt')
 
 # load video
